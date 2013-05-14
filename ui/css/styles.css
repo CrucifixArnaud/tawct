@@ -326,6 +326,21 @@ hr.about-line{
 		max-width:250px;
 	}
 	
+	#about{
+		font-size:0.75em;
+	}
+	
+	#about h2,
+	#about p{
+		margin-bottom:3px;
+	}
+	
+	hr.about-line{
+		height:18px;
+		max-width:420px;
+		margin-bottom:3px;
+	}
+	
 	#gallery{
 		padding:0;
 	}
