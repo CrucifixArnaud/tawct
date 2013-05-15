@@ -327,7 +327,8 @@ hr.about-line{
 	}
 	
 	#about{
-		font-size:0.75em;
+		font-size:0.5em;
+		top:105px;
 	}
 	
 	#about h2,
@@ -336,9 +337,7 @@ hr.about-line{
 	}
 	
 	hr.about-line{
-		height:18px;
-		max-width:420px;
-		margin-bottom:3px;
+		display: none;
 	}
 	
 	#gallery{
