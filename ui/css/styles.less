@@ -229,32 +229,19 @@ figure:focus figcaption{
 
 #about{
 	position:fixed;
-	z-index:0;
 	left:0;
+	z-index:3666;
 	top:200px;
 }
 
-#about.on{
-	z-index:3666;
-}
-
-#about.off{
-	z-index:-1000;
-}
-
-.about-line{
-	position:absolute;
+#about > *{
+	position:relative;
 	left:-1000px;
 	max-width:960px;
 	height:auto;
 }
 
-.about-line.on,
-.about-line.off{
-	position:relative;
-}
-
-.about-line.on{
+#about > *.on{
 	left:0;	
 }
 
@@ -283,7 +270,7 @@ figure:focus figcaption{
 	border-bottom:1px dotted #27a887;
 }
 
-hr.about-line{
+#about hr{
 	display:block;
 	background:white;
 	height:25px;
@@ -293,11 +280,10 @@ hr.about-line{
 	margin-bottom:5px;
 }
 
-.about-line.on,
-.about-line.off{
+#about > *{
 	-webkit-transition:left 0.8s ease;
 	   -moz-transition:left 0.8s ease;
-			transition:left 0.8s ease;
+					transition:left 0.8s ease;
 }
 
 	/* $no-js about */
@@ -309,7 +295,7 @@ hr.about-line{
 		padding-bottom:20px;
 	}
 	
-	.no-js .about-line.off{
+	.no-js #about > *.off{
 		position:statics;
 		left:inherit;
 	}
@@ -336,7 +322,7 @@ hr.about-line{
 		margin-bottom:3px;
 	}
 	
-	hr.about-line{
+	#about hr{
 		display: none;
 	}
 	

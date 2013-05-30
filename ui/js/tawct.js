@@ -94,38 +94,19 @@ $(function(){
 	// About
 	//-------------------------
 	
-	var aboutState = false;
-	var firstLaunch = true;
-	var nextLine = null;
-	var timerNextLine = null;
+	var itemsList = document.getElementById("about");
+	var btnAbout = document.getElementById("link-about");
+	var itemsListState = false;
+	var animationState = false;
 	
-	$('.about-line').removeClass('off');
-	
-	document.getElementById('link-about').onclick = function(e){
+	btnAbout.onclick = function(e){
 		e.preventDefault();
-		if(false == aboutState){
-			document.getElementById('about').className = 'on'
-			nextLine = $('#about .about-line').first();
-			_toggleAboutLine(nextLine);
-			aboutState = true;
+		// Prevent click during animation
+		if(animationState == false){
+			animationState = !animationState;
+			_animateSequence(itemsList,"forward", 150,function(){
+				animationState = !animationState; // toggle animationstate
+			});				
 		}
-	}			
-
-	function _toggleAboutLine(target){
-		clearTimeout(timerNextLine);
-		nextLine = target.next('.about-line');
-		if(target.hasClass('off') || true == firstLaunch){
-			target.removeClass('off');
-			target.addClass('on');
-		}else{
-			target.removeClass('on');
-			target.addClass('off');
-		}
-		if(nextLine.length > 0){
-			timerNextLine = setTimeout(function(){_toggleAboutLine(nextLine)}, 100)
-		}else{					
-			aboutState = false;
-			firstLaunch = false;
-		}
-	} 
+	}
 });
