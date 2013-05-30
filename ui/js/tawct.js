@@ -40,7 +40,11 @@ $(function(){
 		
 	if(ua == 'Safari' || ua == 'Chrome'){
 		globalTag.classList.add('text-fill');
-	}	
+	}
+	
+	// Lazy Load
+	
+	$("figure img").show().lazyload();
 	
 	// Scroll handler
 	//-------------------------
@@ -98,15 +102,29 @@ $(function(){
 	var btnAbout = document.getElementById("link-about");
 	var itemsListState = false;
 	var animationState = false;
+	var uglyTimerHack;
 	
 	btnAbout.onclick = function(e){
 		e.preventDefault();
 		// Prevent click during animation
 		if(animationState == false){
 			animationState = !animationState;
-			_animateSequence(itemsList,"forward", 150,function(){
-				animationState = !animationState; // toggle animationstate
-			});				
+			if(itemsListState == false){
+				itemsList.classList.toggle("on");
+				_animateSequence(itemsList,"forward", 150,function(){
+					animationState = !animationState; // toggle animationstate
+					itemsListState = !itemsListState;
+				});
+			}else{
+				_animateSequence(itemsList,"forward", 150,function(){
+					uglyTimerHack = setTimeout(function(){
+						clearTimeout(uglyTimerHack);
+						itemsList.classList.toggle("on");
+						itemsListState = !itemsListState;
+						animationState = !animationState; // toggle animationstate				
+					}, 400);
+				});
+			}
 		}
-	}
+	}	
 });

@@ -50,7 +50,7 @@
 					?>
 					<li>
 						<figure>
-							<img src="data/img/<?php echo $picture; ?>" alt="">
+							<img data-original="data/img/<?php echo $picture; ?>" src="ui/img/placeholder-1px.png" alt="">
 							<figcaption><?php echo preg_replace("/\\.[^.\\s]{3,4}$/", "", $picture); ?></figcaption>
 						</figure>
 					</li>
@@ -62,7 +62,7 @@
 			
 			?>
 		</ul>
-		<div id="about" class="on">
+		<div id="about">
 			<h2>About :</h2>
 			<p>The Amazing Wc Tour (<abbr title="The Amazing Wc Tour">tawct</abbr>) &mdash; Created by <a href="//crucifixarnaud.com" title="To Crucifix Arnaud personal page">Crucifix Arnaud</a> (2012)</p>
 			<p>The <?=  $picturesCount ?> photographs display on <abbr title="The Amazing Wc Tour">tawct</abbr> are shared under the terms of <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="Read the entire licence summry">Attribution, Noncommercial, Share Alike 3.0 Creative Commons Licence</a>.</p>
@@ -74,9 +74,7 @@
 		</div>
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/lib/jquery.mousewheel.min.js"></script>
-	<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/lib/browsersdetect.min.js"></script>
-	<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/animate-sequence.min.js"></script>
-	<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/tawct.js"></script>
+	<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/lib/jquery.lazyload.min.js"></script>
+	<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/tawct.min.js"></script>
 </body>
 </html>

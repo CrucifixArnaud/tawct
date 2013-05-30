@@ -168,10 +168,12 @@ h1 a:active{
 
 figure{
 	position:relative;
+	min-height:640px;
+	min-width:320px;
 }
 
 figure img{
-	display:block;
+	display:none;
 	z-index:666;
 	position:relative;
 }
@@ -230,8 +232,15 @@ figure:focus figcaption{
 #about{
 	position:fixed;
 	left:0;
-	z-index:3666;
 	top:200px;
+}
+
+#about.on{
+	z-index:3666;
+}
+
+#about.on > *{
+	width:auto;
 }
 
 #about > *{
@@ -239,10 +248,11 @@ figure:focus figcaption{
 	left:-1000px;
 	max-width:960px;
 	height:auto;
+	width:0;
 }
 
 #about > *.on{
-	left:0;	
+	left:0;
 }
 
 #about h2,
