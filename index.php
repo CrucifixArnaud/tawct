@@ -50,7 +50,7 @@
 					?>
 					<li>
 						<figure>
-							<img data-original="data/img/<?php echo $picture; ?>" src="ui/img/placeholder.gif" alt="">
+							<img data-original="data/img/<?php echo $picture; ?>" src="ui/img/placeholder-1px.png" alt="">
 							<figcaption><?php echo preg_replace("/\\.[^.\\s]{3,4}$/", "", $picture); ?></figcaption>
 						</figure>
 					</li>
