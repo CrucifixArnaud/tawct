@@ -18,7 +18,7 @@ var customScroll = true;
 //-------------------------
 function checkScroll(){
 	var globalWidth = globalTag.offsetWidth;
-	
+
 	if(globalWidth <= 450){
 		customScroll = false;
 	}else{
@@ -27,30 +27,30 @@ function checkScroll(){
 }
 
 $(function(){
-	
+
 	// remove class
 	//-------------------------
 	$(globalTag).removeClass('no-js');
 	$(gallery).removeClass('cf');
-	
+
 	// Browser Detection
 	// browsersdetect.js
 	//-------------------------
 	var ua = BrowserDetect.browser;
-		
+
 	if(ua == 'Safari' || ua == 'Chrome'){
 		globalTag.classList.add('text-fill');
 	}
-	
+
 	// Lazy Load
-	
+
 	$("figure img").show().lazyload();
-	
+
 	// Scroll handler
 	//-------------------------
-	
-	checkScroll();	
-		
+
+	checkScroll();
+
 	// Horizontal Scroll Handler
 	// jquery.mousewheel.js
 	//-------------------------
@@ -60,18 +60,18 @@ $(function(){
 			var currentScrollPos = $(document).scrollLeft()
 			window.scrollTo(currentScrollPos - (delta * 200), 0);
 		}
-	});   
-	
+	});
+
 	// Windows Resizer Listener
 	//-------------------------
-	
+
 	window.onresize = function(e){
 		checkScroll();
 	}
-	
+
 	// Keyboard Nav Handler
 	//-------------------------
-	
+
 	window.onkeydown = function(e){
 		var _key = e.keyCode;
 		if(customScroll == true){
@@ -94,16 +94,16 @@ $(function(){
 			}
 		}
 	}
-	
+
 	// About
 	//-------------------------
-	
+
 	var itemsList = document.getElementById("about");
 	var btnAbout = document.getElementById("link-about");
 	var itemsListState = false;
 	var animationState = false;
 	var uglyTimerHack;
-	
+
 	btnAbout.onclick = function(e){
 		e.preventDefault();
 		// Prevent click during animation
@@ -121,10 +121,10 @@ $(function(){
 						clearTimeout(uglyTimerHack);
 						itemsList.classList.toggle("on");
 						itemsListState = !itemsListState;
-						animationState = !animationState; // toggle animationstate				
+						animationState = !animationState; // toggle animationstate
 					}, 400);
 				});
 			}
 		}
-	}	
+	}
 });
