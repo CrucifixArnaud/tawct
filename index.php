@@ -1,36 +1,37 @@
-<?php 
-	// Config	
-	$dir = 'data/img/'; 
+<?php
+	// Config
+	$dir = 'data/img/';
 	$picturesCount = 0;
 	$env = substr($_SERVER['HTTP_HOST'], -3);
 ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="ie ie6 lte9 lte8 lte7" lang="en"> <![endif]-->
-<!--[if IE 7]> <html class="ie ie7 lte9 lte8 lte7" lang="en"> <![endif]--> 
+<!--[if IE 7]> <html class="ie ie7 lte9 lte8 lte7" lang="en"> <![endif]-->
 <!--[if IE 8]> <html class="ie ie8 lte9 lte8" lang="en"> <![endif]-->
-<!--[if IE 9]> <html class="ie ie9 lte9" lang="en"> <![endif]--> 
-<!--[if gt IE 9]> <html class="ie" lang="en"> <![endif]--> 
+<!--[if IE 9]> <html class="ie ie9 lte9" lang="en"> <![endif]-->
+<!--[if gt IE 9]> <html class="ie" lang="en"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	
+
 	<!-- Prefetch DNS for external assets. -->
 	<link rel="dns-prefetch" href="/ajax.googleapis.com/">
-	
+
 	<title>The Amazing Wc Tour</title>
 	<meta name="author" content="Crucifix Arnaud">
 	<meta name="description" content="WC that I have visited in my life. Simple photography, no pictures improvement, just raw shoots of toilets, takes in every day's life condition">
 	<meta name="apple-mobile-web-app-title" content="The Amazing Wc Tour">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/css/styles.css">  
+	<link rel="stylesheet" href="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/css/styles.css">
 </head>
 <body>
 	<div id="global" class="no-js">
 		<header>
-			<h1><a id="link-about" href="#about">The Amazing Wc Tour</a></h1>
+			<h1><a class="link-about" href="#about">The Amazing Wc Tour</a></h1>
+			<a class="link-about" href="#about">About</a>
 		</header>
 		<ul id="gallery" class="cf"><?php
-			$d = opendir($dir); 
+			$d = opendir($dir);
 			clearstatcache();
 			$files = array();
 			$i = 0;
@@ -38,11 +39,11 @@
 				$i ++;
 				$files[$i] = $file;
 			}
-			
+
 			shuffle($files);
-					
+
 			$validExtension = array('.png','.jpg','.gif','.JPG');
-			
+
 			foreach($files as $picture){
 				$ext = strrchr($picture, '.');
 				if(in_array($ext, $validExtension)){
@@ -56,10 +57,10 @@
 					</li>
 					<?php
 				}
-			}  	
-			
+			}
+
 			closedir($d);
-			
+
 			?>
 		</ul>
 		<div id="about">
@@ -75,6 +76,14 @@
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/lib/jquery.lazyload.min.js"></script>
-	<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/tawct.min.js"></script>
+	<?php if($env == 'dev'){ ?>
+		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/lib/browsersdetect.min.js"></script>
+		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/lib/jquery.lazyload.min.js"></script>
+		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/lib/jquery.mousewheel.min.js"></script>
+		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/animate-sequence.min.js"></script>
+		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/tawct.js"></script>
+	<?php }else{ ?>
+		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/tawct.min.js"></script>
+	<?php }?>
 </body>
 </html>

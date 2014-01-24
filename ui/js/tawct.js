@@ -99,31 +99,33 @@ $(function(){
 	//-------------------------
 
 	var itemsList = document.getElementById("about");
-	var btnAbout = document.getElementById("link-about");
+	var btnAbouts = document.getElementsByClassName("link-about");
 	var itemsListState = false;
 	var animationState = false;
 	var uglyTimerHack;
 
-	btnAbout.onclick = function(e){
-		e.preventDefault();
-		// Prevent click during animation
-		if(animationState == false){
-			animationState = !animationState;
-			if(itemsListState == false){
-				itemsList.classList.toggle("on");
-				_animateSequence(itemsList,"forward", 150,function(){
-					animationState = !animationState; // toggle animationstate
-					itemsListState = !itemsListState;
-				});
-			}else{
-				_animateSequence(itemsList,"forward", 150,function(){
-					uglyTimerHack = setTimeout(function(){
-						clearTimeout(uglyTimerHack);
-						itemsList.classList.toggle("on");
-						itemsListState = !itemsListState;
+	for (var i = 0; i < btnAbouts.length; i++) {
+		btnAbouts[i].onclick = function(e){
+			e.preventDefault();
+			// Prevent click during animation
+			if(animationState == false){
+				animationState = !animationState;
+				if(itemsListState == false){
+					itemsList.classList.toggle("on");
+					_animateSequence(itemsList,"forward", 150,function(){
 						animationState = !animationState; // toggle animationstate
-					}, 400);
-				});
+						itemsListState = !itemsListState;
+					});
+				}else{
+					_animateSequence(itemsList,"forward", 150,function(){
+						uglyTimerHack = setTimeout(function(){
+							clearTimeout(uglyTimerHack);
+							itemsList.classList.toggle("on");
+							itemsListState = !itemsListState;
+							animationState = !animationState; // toggle animationstate
+						}, 400);
+					});
+				}
 			}
 		}
 	}
