@@ -22,7 +22,7 @@
 	<meta name="description" content="WC that I have visited in my life. Simple photography, no pictures improvement, just raw shoots of toilets, takes in every day's life condition">
 	<meta name="apple-mobile-web-app-title" content="The Amazing Wc Tour">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/css/styles.css">
+	<link rel="stylesheet" href="//static.crucifixarnaud.com/tawct/ui/css/styles.css">
 </head>
 <body>
 	<div id="global" class="no-js">
@@ -75,7 +75,7 @@
 		</div>
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/lib/jquery.lazyload.min.js"></script>
+	<script src="//static.crucifixarnaud.com/tawct/ui/js/lib/jquery.lazyload.min.js"></script>
 	<?php if($env == 'dev'){ ?>
 		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/lib/browsersdetect.min.js"></script>
 		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/lib/jquery.lazyload.min.js"></script>
@@ -83,7 +83,7 @@
 		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/animate-sequence.min.js"></script>
 		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/tawct.js"></script>
 	<?php }else{ ?>
-		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/tawct.min.js"></script>
+		<script src="//static.crucifixarnaud.com ?>/tawct/ui/js/tawct.min.js"></script>
 	<?php }?>
 </body>
 </html>
