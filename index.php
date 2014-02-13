@@ -83,7 +83,7 @@
 		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/animate-sequence.min.js"></script>
 		<script src="//static.crucifixarnaud.<?= $env; ?>/tawct/ui/js/tawct.js"></script>
 	<?php }else{ ?>
-		<script src="//static.crucifixarnaud.com ?>/tawct/ui/js/tawct.min.js"></script>
+		<script src="//static.crucifixarnaud.com/tawct/ui/js/tawct.min.js"></script>
 	<?php }?>
 </body>
 </html>
