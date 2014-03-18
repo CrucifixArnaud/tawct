@@ -18,7 +18,7 @@
 	<link rel="dns-prefetch" href="/ajax.googleapis.com/">
 
 	<title>The Amazing Wc Tour</title>
-	<meta name="author" content="Crucifix Arnaud">
+	<meta name="author" content="humans.txt">
 	<meta name="description" content="WC that I have visited in my life. Simple photography, no pictures improvement, just raw shoots of toilets, takes in every day's life condition">
 	<meta name="apple-mobile-web-app-title" content="The Amazing Wc Tour">
 	<meta name="viewport" content="width=device-width">
