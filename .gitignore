@@ -1,2 +1,7 @@
 *.sublime-project
 *.sublime-workspace
+.tmp
+node_modules/
+*.DS_Store
+app/config.ini
+dist/config.ini

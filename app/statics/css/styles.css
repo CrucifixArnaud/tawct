@@ -1,0 +1,412 @@
+/*-----------------------*\
+	The Amazing Wc Tour
+\*-----------------------*/
+/***********************\
+  $var
+\***********************/
+/***********************\
+  $import
+\***********************/
+/***********************\
+  $shared
+\***********************/
+/* @fontface */
+@font-face {
+  font-family: 'Fengardon';
+  src: url("../fonts/fengardoneue_regular-webfont.eot");
+  src: url("../fonts/fengardoneue_regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fengardoneue_regular-webfont.woff") format("woff"), url("../fonts/fengardoneue_regular-webfont.ttf") format("truetype"), url("../fonts/fengardoneue_regular-webfont.svg#FengardoNeueRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* $Reset */
+/* line 32, ../scss/styles.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* $components */
+/* line 39, ../scss/styles.scss */
+abbr {
+  font-variant: small-caps;
+  cursor: help;
+}
+
+/* Clearfix */
+/* line 46, ../scss/styles.scss */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+/* line 52, ../scss/styles.scss */
+.cf:after {
+  clear: both;
+}
+
+/**
+ * $Ie-hack - IE 6/7 only
+ * Trigger hasLayout and contain floats.
+ */
+/* line 60, ../scss/styles.scss */
+.lt-ie8 .cf {
+  zoom: 1;
+}
+
+/*-----------------------*\
+	$Global
+\*-----------------------*/
+/* line 68, ../scss/styles.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Fengardon, courier, serif;
+}
+
+/* line 74, ../scss/styles.scss */
+h1, h2, h3, strong {
+  font-weight: normal;
+}
+
+/* line 78, ../scss/styles.scss */
+#global {
+  height: 100%;
+}
+
+/* line 82, ../scss/styles.scss */
+::selection {
+  background: #f3e4b2;
+}
+
+/* line 86, ../scss/styles.scss */
+::-moz-selection {
+  background: #f3e4b2;
+}
+
+/*-----------------------*\
+	$Header
+\*-----------------------*/
+/* line 94, ../scss/styles.scss */
+header {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 700;
+}
+
+/* line 101, ../scss/styles.scss */
+h1 {
+  font-size: 5em;
+}
+
+/* line 105, ../scss/styles.scss */
+h1 a {
+  color: #e0ca7f;
+  text-transform: uppercase;
+  text-shadow: -10px -10px 10px rgba(255, 255, 255, 0.1);
+  display: block;
+  text-decoration: none;
+}
+
+/* line 113, ../scss/styles.scss */
+header > a {
+  color: #e0ca7f;
+  text-decoration: none;
+  font-size: 1.3em;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #fff;
+  padding: .5em;
+}
+
+/* line 124, ../scss/styles.scss */
+header > a:hover {
+  color: #27a887;
+}
+
+/* line 128, ../scss/styles.scss */
+.text-fill h1 {
+  background: #e0ca7f;
+  background: -moz-linear-gradient(45deg, #e0ca7f 0%, #9a7733 15%, #93702c 26%, #e7d57f 40%, #9d7b3c 60%, #9d7b3c 73%, #cea146 86%, #886718 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #e0ca7f), color-stop(15%, #9a7733), color-stop(26%, #93702c), color-stop(40%, #e7d57f), color-stop(60%, #9d7b3c), color-stop(73%, #9d7b3c), color-stop(86%, #cea146), color-stop(100%, #886718));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #e0ca7f 0%, #9a7733 15%, #93702c 26%, #e7d57f 40%, #9d7b3c 60%, #9d7b3c 73%, #cea146 86%, #886718 100%);
+  background: -o-linear-gradient(45deg, #e0ca7f 0%, #9a7733 15%, #93702c 26%, #e7d57f 40%, #9d7b3c 60%, #9d7b3c 73%, #cea146 86%, #886718 100%);
+  background: -ms-linear-gradient(45deg, #e0ca7f 0%, #9a7733 15%, #93702c 26%, #e7d57f 40%, #9d7b3c 60%, #9d7b3c 73%, #cea146 86%, #886718 100%);
+  background: linear-gradient(45deg, #e0ca7f 0%, #9a7733 15%, #93702c 26%, #e7d57f 40%, #9d7b3c 60%, #9d7b3c 73%, #cea146 86%, #886718 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0ca7f', endColorstr='#886718',GradientType=1 );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+/* line 146, ../scss/styles.scss */
+header a:hover,
+header a:focus,
+header a:active {
+  color: #cea146;
+  cursor: help;
+}
+
+/* line 153, ../scss/styles.scss */
+.text-fill h1 a:hover,
+.text-fill h1 a:focus,
+.text-fill h1 a:active {
+  background: #e0ca7f;
+  background: -moz-linear-gradient(top, #e0ca7f 0%, #9a7733 21%, #e7d57f 50%, #9d7b3c 78%, #cea146 89%, #886718 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e0ca7f), color-stop(21%, #9a7733), color-stop(50%, #e7d57f), color-stop(78%, #9d7b3c), color-stop(89%, #cea146), color-stop(100%, #886718));
+  background: -webkit-linear-gradient(top, #e0ca7f 0%, #9a7733 21%, #e7d57f 50%, #9d7b3c 78%, #cea146 89%, #886718 100%);
+  background: -o-linear-gradient(top, #e0ca7f 0%, #9a7733 21%, #e7d57f 50%, #9d7b3c 78%, #cea146 89%, #886718 100%);
+  background: -ms-linear-gradient(top, #e0ca7f 0%, #9a7733 21%, #e7d57f 50%, #9d7b3c 78%, #cea146 89%, #886718 100%);
+  background: linear-gradient(to bottom, #e0ca7f 0%, #9a7733 21%, #e7d57f 50%, #9d7b3c 78%, #cea146 89%, #886718 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0ca7f', endColorstr='#886718',GradientType=0 );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+/*-----------------------*\
+	$Content
+\*-----------------------*/
+/* line 177, ../scss/styles.scss */
+#gallery {
+  padding: 0 10px;
+  display: table;
+  height: 100%;
+}
+
+/* line 183, ../scss/styles.scss */
+#gallery li {
+  list-style-type: none;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+/* line 190, ../scss/styles.scss */
+figure {
+  position: relative;
+  min-height: 640px;
+  min-width: 320px;
+}
+
+/* line 196, ../scss/styles.scss */
+figure img {
+  display: none;
+  z-index: 666;
+  position: relative;
+}
+
+/* line 202, ../scss/styles.scss */
+figure:hover img,
+figure:focus img {
+  position: static;
+}
+
+/* line 207, ../scss/styles.scss */
+figcaption {
+  display: block;
+  font-family: Courier, serif;
+  position: absolute;
+  color: gold;
+  bottom: 5px;
+  right: 5px;
+  font-size: 1.2em;
+  text-align: right;
+  z-index: 0;
+}
+
+/* line 219, ../scss/styles.scss */
+figure:hover figcaption,
+figure:focus figcaption {
+  z-index: 3666;
+}
+
+/* $no-js gallery */
+/* line 226, ../scss/styles.scss */
+.no-js #gallery {
+  display: block;
+  margin-top: 100px;
+  height: auto;
+}
+
+/* line 232, ../scss/styles.scss */
+.no-js #gallery li {
+  display: block;
+  clear: left;
+}
+
+/* line 237, ../scss/styles.scss */
+.no-js #gallery img {
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 242, ../scss/styles.scss */
+.no-js #gallery figcaption {
+  position: static;
+  text-align: left;
+  color: #cea146;
+}
+
+/*-----------------------*\
+	$About
+\*-----------------------*/
+/* line 252, ../scss/styles.scss */
+#about {
+  position: fixed;
+  left: 0;
+  top: 200px;
+}
+
+/* line 258, ../scss/styles.scss */
+#about.on {
+  z-index: 3666;
+}
+
+/* line 262, ../scss/styles.scss */
+#about.on > * {
+  width: auto;
+}
+
+/* line 266, ../scss/styles.scss */
+#about > * {
+  position: relative;
+  left: -1000px;
+  max-width: 960px;
+  height: auto;
+  width: 0;
+}
+
+/* line 274, ../scss/styles.scss */
+#about > *.on {
+  left: 0;
+}
+
+/* line 278, ../scss/styles.scss */
+#about h2,
+#about p {
+  color: #9d7b3c;
+  background: #fff;
+  padding-left: 20px;
+  padding-right: 5px;
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+
+/* line 288, ../scss/styles.scss */
+#about strong {
+  border-bottom: 1px dotted #9d7b3c;
+}
+
+/* line 292, ../scss/styles.scss */
+#about a {
+  color: #27a887;
+  text-decoration: none;
+}
+
+/* line 297, ../scss/styles.scss */
+#about a:hover,
+#about a:focus,
+#about a:active {
+  border-bottom: 1px dotted #27a887;
+}
+
+/* line 303, ../scss/styles.scss */
+#about hr {
+  display: block;
+  background: white;
+  height: 25px;
+  width: 100%;
+  max-width: 990px;
+  border: 0;
+  margin-bottom: 5px;
+}
+
+/* line 313, ../scss/styles.scss */
+#about > * {
+  -moz-transition: left 0.8s ease;
+  -o-transition: left 0.8s ease;
+  -webkit-transition: left 0.8s ease;
+  transition: left 0.8s ease;
+}
+
+/* $no-js about */
+/* line 319, ../scss/styles.scss */
+.no-js #about {
+  clear: left;
+  position: static;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 326, ../scss/styles.scss */
+.no-js #about > *.off {
+  position: statics;
+  left: inherit;
+}
+
+/*-----------------------*\
+	$Reponsive
+\*-----------------------*/
+/* Smartphones (portrait) ----------- */
+@media (max-width: 50em) {
+  /* line 337, ../scss/styles.scss */
+  h1 {
+    font-size: 2.5em;
+    max-width: 250px;
+  }
+
+  /* line 341, ../scss/styles.scss */
+  header > a {
+    display: none;
+  }
+
+  /* line 344, ../scss/styles.scss */
+  #about {
+    font-size: 0.7em;
+    top: 105px;
+  }
+
+  /* line 348, ../scss/styles.scss */
+  #about h2,
+  #about p {
+    margin-bottom: 3px;
+  }
+
+  /* line 352, ../scss/styles.scss */
+  #about hr {
+    display: none;
+  }
+
+  /* line 355, ../scss/styles.scss */
+  #gallery {
+    padding: 0;
+  }
+
+  /* line 358, ../scss/styles.scss */
+  #gallery li {
+    padding: 0;
+    margin: 20px 0;
+    display: block;
+  }
+
+  /* line 363, ../scss/styles.scss */
+  #gallery li img {
+    width: 100%;
+  }
+
+  /* line 366, ../scss/styles.scss */
+  figcaption {
+    position: static;
+  }
+}

@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /works
+Disallow: /sound
+Disallow: /pic
+Disallow: /applications
+Disallow: /temps
+Disallow: /archives
+Disallow: /photos
+Disallow: /old
