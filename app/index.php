@@ -87,7 +87,7 @@
 		<script src="<?= $statics ?>/js/animate-sequence.js"></script>
 		<script src="<?= $statics ?>/js/tawct.js"></script>
 	<?php }else{ ?>
-		<script src="<?= $statics ?>/js/tawct.min.js"></script>
+		<script src="<?= $statics ?>/js/scripts.js"></script>
 	<?php }?>
 </body>
 </html>
