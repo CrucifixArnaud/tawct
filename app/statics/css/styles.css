@@ -359,7 +359,7 @@ figure:focus figcaption {
 	$Reponsive
 \*-----------------------*/
 /* Smartphones (portrait) ----------- */
-@media (max-width: 50em) {
+@media (max-width: 24em) {
   /* line 337, ../scss/styles.scss */
   h1 {
     font-size: 2.5em;
