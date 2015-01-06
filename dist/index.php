@@ -90,7 +90,7 @@
 		<script src="<?= $statics ?>/js/scripts.js"></script>
 	<?php }?>
 
-	<?php if($env == 'prod'){?>
+	<?php if($env == 'production'){?>
 		<!-- Google Analytics
 		================================== -->
 		<script>
