@@ -1,18 +1,14 @@
-/*------------------------*\
-	Author
-\*------------------------*/
+#	Author
 
 Crucifix Arnaud
-
 hello[at]crucifixarnaud.com
 
-Twitter  :	https://twitter.com/crucifixarnaud
-Github   :	https://github.com/CrucifixArnaud
-LinkedIn :	http://www.linkedin.com/pub/arnaud-crucifix/1a/998/760
+* Web : crucifixarnaud.com
+* Twitter :	twitter.com/crucifixarnaud
+* Github :	github.com/CrucifixArnaud
+* LinkedIn :	www.linkedin.com/pub/arnaud-crucifix/1a/998/760
 
-/*------------------------*\
-	Technologies
-\*------------------------*/
+#	Technologies
 
 	Homemade :
 		* HTML5
@@ -20,23 +16,23 @@ LinkedIn :	http://www.linkedin.com/pub/arnaud-crucifix/1a/998/760
 		* Css (compiled with Less)
 
 	External lib : 
-		* jquery	    :	http://jquery.com/
-		* jquery.lazyload   :  	http://www.appelsiini.net/projects/lazyload
+		* jquery :	http://jquery.com/
+		* jquery.lazyload : http://www.appelsiini.net/projects/lazyload
 		* jquery.mousewhell :	https://code.google.com/p/razor/downloads/detail?name=jquery.mousewheel.min.js
 
 	Tools :
 		* Sublime text 3 : http://www.sublimetext.com/3
-		* Less.app	 : http://incident57.com/less/
-		* Git		 : http://git-scm.com/
+		* Less.app : http://incident57.com/less/
+		* Git : http://git-scm.com/
 
 	Fonts :
 		This website use FengardoNeue typeface, created by Akalollip (http://www.akalollip.com/) and distributed by Velvetyne (http://www.velvetyne.fr/) type foundry under SIL OFL licence (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL) or creative commons licences.
 		
 		Captions use Courier typeface, created by Howard "Bud" Kettler for ibm. (http://www.graphos.org/courier.html)
 
-/*------------------------*\
-	© Copyright
-\*------------------------*/
+#	© Copyright
 
 This website is registered under "Do What the Fuck You Want to Public License" (http://www.wtfpl.net)
+
+
 
