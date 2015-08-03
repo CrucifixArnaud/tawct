@@ -52,6 +52,34 @@ module.exports = function (grunt) {
                 tasks: ['dev']
             }
         },
+        // SASS compilation
+        sass: {
+            global: {
+                options: {
+                  sourceMap: true,
+                  sourceComments: false,
+                  outputStyle: 'compressed'
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= config.app %>/statics/scss/',
+                    src: ['styles.scss'],
+                    dest: '<%= config.app %>/statics/css/',
+                    ext: '.css'
+                }]
+            }
+        },
+        // Autoprefixer
+        autoprefixer: {
+            options: {
+                browsers: ['last 2 versions', 'ie 9', 'ie 8'],
+                map: true,
+                diff: true
+            },
+            styles: {
+                src: '<%= config.dist %>/statics/css/styles.css'
+            }
+        },
         // Compass files
         compass: {
             build: {
@@ -178,19 +206,20 @@ module.exports = function (grunt) {
     ]);
     // Dev task (build website in .tmp)
     grunt.registerTask('dev', [
-        'compass',
+        'sass',
+        'autoprefixer',
         'jshint',
         'clean:dev',
         'copyto:dev',
     ]);
     // Build task (build website for production (or staging) in .dist)
     grunt.registerTask('build', [
-        'compass',
+        'sass',
+        'autoprefixer',
         'jshint',
         'clean:dist',
         'copyto:dist',
         'imagemin',
-        'cssmin',
         'concat:dist',
         'clean:concat',
         'clean:sketch',
