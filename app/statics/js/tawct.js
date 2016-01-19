@@ -117,7 +117,7 @@ $(function(){
 					itemsList.classList.toggle('on');
 					animateSequence(itemsList,{
 						direction: 'forward',
-						duration: 150,
+						duration: 50,
 						callback: function(){
 							animationState = false; // toggle animationstate
 							itemsListState = true;
@@ -126,7 +126,7 @@ $(function(){
 				}else{
 					animateSequence(itemsList,{
 						direction: 'backward',
-						duration: 150,
+						duration: 50,
 						callback: function(){
 							uglyTimerHack = setTimeout(function(){
 								clearTimeout(uglyTimerHack);

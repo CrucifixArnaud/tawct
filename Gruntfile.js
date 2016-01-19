@@ -56,7 +56,7 @@ module.exports = function (grunt) {
         sass: {
             global: {
                 options: {
-                  sourceMap: true,
+                  sourceMap: false,
                   sourceComments: false,
                   outputStyle: 'compressed'
                 },
