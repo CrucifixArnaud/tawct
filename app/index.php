@@ -79,7 +79,6 @@
 		</div>
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="<?= $statics ?>/js/lib/jquery.lazyload.min.js"></script>
 	<?php if($env == 'dev'){ ?>
 		<script src="<?= $statics ?>/js/lib/browsersdetect.min.js"></script>
 		<script src="<?= $statics ?>/js/lib/jquery.lazyload.min.js"></script>
