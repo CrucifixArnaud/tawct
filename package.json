@@ -2,12 +2,8 @@
   "name": "crucifixarnaud.com",
   "version": "0.1.0",
   "description": "Crucifix Arnaud Websites",
-  "main": "/app/portfolio/index.php",
+  "main": "/app/index.php",
   "readme": "readme.txt",
-  "repository": "ssh://acr@billyponey.com:23336/home/acr/git/crucifixarnaud.git",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "hello@crucifixarnaud.com",
   "license": "WTFPL",
   "devDependencies": {
@@ -15,7 +11,6 @@
     "grunt-autoprefixer": "^3.0.3",
     "grunt-concurrent": "^0.5.0",
     "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-compass": "^0.8.0",
     "grunt-contrib-concat": "^0.4.0",
     "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-cssmin": "^0.9.0",

@@ -80,14 +80,6 @@ module.exports = function (grunt) {
                 src: '<%= config.dist %>/statics/css/styles.css'
             }
         },
-        // Compass files
-        compass: {
-            build: {
-                options: {
-                    config: 'config.rb'
-                }
-            }
-        },
         concat: {
             options: {
                 separator: ';',
