@@ -55,13 +55,17 @@ abbr {
 	$Global
 \*-----------------------*/
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     font-family: Fengardon, courier, serif;
 }
 
-h1, h2, h3, strong {
+h1,
+h2,
+h3,
+strong {
     font-weight: normal;
 }
 
@@ -184,7 +188,7 @@ figcaption {
     display: block;
     font-family: Courier, serif;
     position: absolute;
-    color: gold;
+    color: #ffd700;
     bottom: 5px;
     right: 5px;
     font-size: 1.2em;
@@ -278,7 +282,7 @@ figure:focus figcaption {
 
 #about hr {
     display: block;
-    background: white;
+    background: #fff;
     height: 25px;
     width: 100%;
     max-width: 990px;
@@ -314,31 +318,39 @@ figure:focus figcaption {
         font-size: 2.5em;
         max-width: 250px;
     }
+
     header > a {
         display: none;
     }
+
     #about {
         font-size: 0.7em;
         top: 105px;
     }
+
     #about h2,
     #about p {
         margin-bottom: 3px;
     }
+
     #about hr {
         display: none;
     }
+
     #gallery {
         padding: 0;
     }
+
     #gallery li {
         padding: 0;
         margin: 20px 0;
         display: block;
     }
+
     #gallery li img {
         width: 100%;
     }
+
     figcaption {
         position: static;
     }
