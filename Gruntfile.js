@@ -89,9 +89,11 @@ module.exports = function (grunt) {
                 dest: '<%= config.dist %>/statics/js/scripts.js',
             },
         },
-        jshint: {
-            jshintrc: '../../../.jshintrc',
-            files: ['<%= config.app %>/statics/js/{,*/}*.js', '!<%= config.app %>/statics/js/lib/*.js']
+        eslint: {
+          options: {
+              configFile: '.eslintrc.js',
+          },
+          target: ['<%= config.app %>/statics/js/{,*/}*.js', '!<%= config.app %>/statics/js/lib/*.js']
         },
         // Optimize img
         imagemin: {
@@ -200,7 +202,7 @@ module.exports = function (grunt) {
     grunt.registerTask('dev', [
         'sass',
         'autoprefixer',
-        'jshint',
+        'eslint',
         'clean:dev',
         'copyto:dev',
     ]);
@@ -208,7 +210,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'sass',
         'autoprefixer',
-        'jshint',
+        'eslint',
         'clean:dist',
         'copyto:dist',
         'imagemin',
