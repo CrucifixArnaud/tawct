@@ -4,7 +4,6 @@
 	$app = $config['app'];
 	$dir = $config['data'];
 	$env = $config['environment'];
-	$statics = $config['statics'];
 	$favicon = $config['favicon'];
 	$picturesCount = 0;
 ?>
@@ -26,7 +25,7 @@
 	<meta name="description" content="WC that I have visited in my life. Simple photography, no pictures improvement, just raw shoots of toilets, takes in every day's life condition">
 	<meta name="apple-mobile-web-app-title" content="The Amazing Wc Tour">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="<?= $statics ?>/css/styles.css">
+	<link rel="stylesheet" href="/statics/css/styles.css">
 </head>
 <body>
 	<div id="global" class="no-js">
@@ -55,7 +54,7 @@
 					?>
 					<li>
 						<figure>
-							<img data-original="data/img/<?php echo $picture; ?>" src="<?= $statics ?>/img/placeholder-1px.png" alt="">
+							<img data-original="data/img/<?php echo $picture; ?>" src="/statics/img/placeholder-1px.png" alt="">
 							<figcaption><?php echo preg_replace("/\\.[^.\\s]{3,4}$/", "", $picture); ?></figcaption>
 						</figure>
 					</li>
@@ -80,13 +79,13 @@
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<?php if($env == 'dev'){ ?>
-		<script src="<?= $statics ?>/js/lib/browsersdetect.min.js"></script>
-		<script src="<?= $statics ?>/js/lib/jquery.lazyload.min.js"></script>
-		<script src="<?= $statics ?>/js/lib/jquery.mousewheel.min.js"></script>
-		<script src="<?= $statics ?>/js/animate-sequence.js"></script>
-		<script src="<?= $statics ?>/js/tawct.js"></script>
+		<script src="/statics/js/lib/browsersdetect.min.js"></script>
+		<script src="/statics/js/lib/jquery.lazyload.min.js"></script>
+		<script src="/statics/js/lib/jquery.mousewheel.min.js"></script>
+		<script src="/statics/js/animate-sequence.js"></script>
+		<script src="/statics/js/tawct.js"></script>
 	<?php }else{ ?>
-		<script src="<?= $statics ?>/js/scripts.js"></script>
+		<script src="/statics/js/scripts.js"></script>
 	<?php }?>
 
 	<?php if($env == 'production'){?>
