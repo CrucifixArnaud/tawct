@@ -4,6 +4,7 @@ module.exports = {
     "es6": true
   },
   "globals": {
+    LazyLoad: "true"
   },
   "extends": "eslint:recommended",
   "installedESLint": true,
