@@ -69,9 +69,8 @@
     <div id="about">
       <h2>About :</h2>
       <p>The Amazing Wc Tour (<abbr title="The Amazing Wc Tour">tawct</abbr>) &mdash; Created by <a href="//crucifixarnaud.com" title="To Crucifix Arnaud personal page">Crucifix Arnaud</a> (2012)</p>
-      <p>The <?=  $picturesCount ?> photographs display on <abbr title="The Amazing Wc Tour">tawct</abbr> are shared under the terms of <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="Read the entire licence summry">Attribution, Noncommercial, Share Alike 3.0 Creative Commons Licence</a>.</p>
       <hr />
-      <p>All photographs is also display on <a href="http://www.flickr.com/photos/16957305@N07/sets/72157603760079304/" title="Visit the Tawct flickr set">Flickr</a> in different sizes.</p>
+      <p>The Amazing Wc Tour and the <?=  $picturesCount ?> photographs are shared under <a href="http://sam.zoy.org/wtfpl/"><abbr title="Do What the Fuck You Want to Public License">WTFPL</abbr> license</a>.</p>
       <hr />
       <p>This website use <strong>FengardoNeue</strong> typeface, created by <a href="//www.akalollip.com" title="To akalollip personal website">akalollip</a> and distributed by <a href="http://velvetyne.fr/" title="To the velvetyne website">velvetyne type foundry</a> under <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL"><abbr title="SIL Open Font License">SIL OFL</abbr> licence</a> or creative commons licences.</p>
       <p>Captions use <strong>Courier</strong> typeface, created by <a href="http://www.graphos.org/courier.html" title="To the graphos.org page about Courier">Howard "Bud" Kettler</a> for <abbr title="International Business Machines">ibm</abbr>.</p>
