@@ -106,6 +106,7 @@ h1 a {
   text-shadow: -10px -10px 10px rgba(255, 255, 255, 0.1);
   display: block;
   text-decoration: none;
+  transition: background .2s ease;
 }
 
 header > a {
@@ -119,21 +120,6 @@ header > a {
   padding: .5em;
 }
 
-header > a:hover {
-  color: #27a887;
-}
-
-.text-fill h1 {
-  background: #e0ca7f;
-  background: linear-gradient(45deg, #e0ca7f 0%, #9a7733 15%, #93702c 26%, #e7d57f 40%, #9d7b3c 60%, #9d7b3c 73%, #cea146 86%, #886718 100%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  text-fill-color: transparent;
-}
-
 header a:hover,
 header a:focus,
 header a:active {
@@ -141,17 +127,69 @@ header a:active {
   cursor: help;
 }
 
-.text-fill h1 a:hover,
-.text-fill h1 a:focus,
-.text-fill h1 a:active {
-  background: #e0ca7f;
-  background: linear-gradient(to bottom, #e0ca7f 0%, #9a7733 21%, #e7d57f 50%, #9d7b3c 78%, #cea146 89%, #886718 100%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  text-fill-color: transparent;
+@supports (background-clip: text) or
+          (-moz-background-clip: text) or
+          (-webkit-background-clip: text) or
+          (text-fill-color: transparent) or
+          (-moz-text-fill-color: transparent) or
+          (-webkit-text-fill-color: transparent) {
+
+  h1 {
+    background: #e0ca7f;
+    background: linear-gradient(45deg, #e0ca7f 0%, #9a7733 15%, #93702c 26%, #e7d57f 40%, #9d7b3c 60%, #9d7b3c 73%, #cea146 86%, #886718 100%);
+  }
+
+  h1 a:hover,
+  h1 a:focus,
+  h1 a:active {
+    background: #cea146;
+    background: linear-gradient(to bottom, #e0ca7f 0%, #9a7733 21%, #e7d57f 50%, #9d7b3c 78%, #cea146 89%, #886718 100%);
+  }
+}
+
+@supports (-webkit-background-clip: text) and
+          (-webkit-text-fill-color: transparent) {
+  h1 {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h1 a:hover,
+  h1 a:focus,
+  h1 a:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@supports (-moz-background-clip: text) and
+          (-moz-text-fill-color: transparent) {
+  h1 {
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+
+  h1 a:hover,
+  h1 a:focus,
+  h1 a:active {
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}
+
+@supports (background-clip: text) and
+          (text-fill-color: transparent) {
+  h1 {
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  h1 a:hover,
+  h1 a:focus,
+  h1 a:active {
+    background-clip: text;
+    text-fill-color: transparent;
+  }
 }
 
 /*-----------------------*\

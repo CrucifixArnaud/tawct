@@ -58,7 +58,7 @@ module.exports = function (grunt) {
                 options: {
                   sourceMap: false,
                   sourceComments: false,
-                  outputStyle: 'compressed'
+                  outputStyle: 'expanded'
                 },
                 files: [{
                     expand: true,
@@ -70,15 +70,31 @@ module.exports = function (grunt) {
             }
         },
         // Autoprefixer
-        autoprefixer: {
-            options: {
-                browsers: ['last 2 versions', 'ie 9', 'ie 8'],
-                map: true,
-                diff: true
+        // autoprefixer: {
+        //     options: {
+        //         browsers: ['last 2 versions', 'ie 9', 'ie 8'],
+        //         map: true,
+        //         diff: true
+        //     },
+        //     styles: {
+        //         src: '<%= config.dist %>/statics/css/styles.css'
+        //     }
+        // },
+        postcss: {
+          options: {
+            map: {
+              inline: false, // save all sourcemaps as separate files...
+              annotation: '<%= config.app %>/statics/css/' // ...to the specified directory
             },
-            styles: {
-                src: '<%= config.dist %>/statics/css/styles.css'
-            }
+            processors: [
+              require('autoprefixer')({
+                browsers: ['last 2 versions', 'IE 9', 'IE 8']
+              }),
+            ]
+          },
+          dist: {
+            src: '<%= config.app %>/statics/css/*.css'
+          }
         },
         concat: {
             options: {
@@ -201,7 +217,7 @@ module.exports = function (grunt) {
     // Dev task (build website in .tmp)
     grunt.registerTask('dev', [
         'sass',
-        'autoprefixer',
+        'postcss',
         'eslint',
         'clean:dev',
         'copyto:dev',
@@ -209,7 +225,7 @@ module.exports = function (grunt) {
     // Build task (build website for production (or staging) in .dist)
     grunt.registerTask('build', [
         'sass',
-        'autoprefixer',
+        'postcss',
         'eslint',
         'clean:dist',
         'copyto:dist',

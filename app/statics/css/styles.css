@@ -1,1 +1,362 @@
-@font-face{font-family:'Fengardon';src:url("../fonts/fengardoneue_regular-webfont.eot");src:url("../fonts/fengardoneue_regular-webfont.eot?#iefix") format("embedded-opentype"),url("../fonts/fengardoneue_regular-webfont.woff") format("woff"),url("../fonts/fengardoneue_regular-webfont.ttf") format("truetype"),url("../fonts/fengardoneue_regular-webfont.svg#FengardoNeueRegular") format("svg");font-weight:normal;font-style:normal}*{margin:0;padding:0}abbr{font-variant:small-caps;cursor:help}.cf:before,.cf:after{content:" ";display:table}.cf:after{clear:both}.lt-ie8 .cf{zoom:1}html,body{height:100%;width:100%;font-family:Fengardon, courier, serif}body{font-family:16px}h1,h2,h3,strong{font-weight:normal}#global{height:100%}::selection{background:#f3e4b2}::-moz-selection{background:#f3e4b2}header{position:fixed;top:15px;left:15px;z-index:700}h1{font-size:5em}h1 a{color:#e0ca7f;text-transform:uppercase;text-shadow:-10px -10px 10px rgba(255,255,255,0.1);display:block;text-decoration:none}header>a{color:#e0ca7f;text-decoration:none;font-size:1.3em;position:fixed;right:0;top:0;background:#fff;padding:.5em}header>a:hover{color:#27a887}.text-fill h1{background:#e0ca7f;background:linear-gradient(45deg, #e0ca7f 0%, #9a7733 15%, #93702c 26%, #e7d57f 40%, #9d7b3c 60%, #9d7b3c 73%, #cea146 86%, #886718 100%);-webkit-background-clip:text;-moz-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-moz-text-fill-color:transparent;text-fill-color:transparent}header a:hover,header a:focus,header a:active{color:#cea146;cursor:help}.text-fill h1 a:hover,.text-fill h1 a:focus,.text-fill h1 a:active{background:#e0ca7f;background:linear-gradient(to bottom, #e0ca7f 0%, #9a7733 21%, #e7d57f 50%, #9d7b3c 78%, #cea146 89%, #886718 100%);-webkit-background-clip:text;-moz-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-moz-text-fill-color:transparent;text-fill-color:transparent}#gallery{padding:0 10px;display:table;height:100%}#gallery li{list-style-type:none;display:table-cell;vertical-align:middle;padding:10px}figure{position:relative;min-height:640px;min-width:320px}figure img{z-index:666;position:relative}figure:hover img,figure:focus img{position:static}figcaption{display:block;font-family:Courier, serif;position:absolute;color:#ffd700;bottom:5px;right:5px;font-size:1.2em;text-align:right;z-index:0}figure:hover figcaption,figure:focus figcaption{z-index:3666}.no-js #gallery{display:block;margin-top:100px;height:auto}.no-js #gallery li{display:block;clear:left}.no-js #gallery img{float:left;margin-right:20px}.no-js #gallery figcaption{position:static;text-align:left;color:#cea146}#about{position:fixed;left:0;top:200px}#about.on{z-index:3666}#about.on>*{width:auto}#about>*{position:relative;left:-1000px;max-width:960px;height:auto;width:0}#about>*.on{left:0}#about h2,#about p{color:#9d7b3c;background:#fff;padding-left:20px;padding-right:5px;margin-bottom:5px;line-height:1.6}#about strong{border-bottom:1px dotted #9d7b3c}#about a{color:#27a887;text-decoration:none}#about a:hover,#about a:focus,#about a:active{border-bottom:1px dotted #27a887}#about hr{display:block;background:#fff;height:25px;width:100%;max-width:990px;border:0;margin-bottom:5px}#about>*{transition:left 0.8s ease}.no-js #about{clear:left;position:static;margin-top:20px;padding-bottom:20px}.no-js #about>*.off{position:statics;left:inherit}@media screen and (max-width: 38em){h1{font-size:2.5em;max-width:250px}header>a{display:none}#about{font-size:0.7em;top:105px}#about h2,#about p{margin-bottom:3px}#about hr{display:none}#gallery{padding:0}#gallery li{padding:0;margin:20px 0;display:block}#gallery li img{width:100%}figcaption{position:static}}
+/*-----------------------*	The Amazing Wc Tour
+\*-----------------------*/
+/***********************  $shared
+\***********************/
+/* @fontface */
+@font-face {
+  font-family: 'Fengardon';
+  src: url("../fonts/fengardoneue_regular-webfont.eot");
+  src: url("../fonts/fengardoneue_regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fengardoneue_regular-webfont.woff") format("woff"), url("../fonts/fengardoneue_regular-webfont.ttf") format("truetype"), url("../fonts/fengardoneue_regular-webfont.svg#FengardoNeueRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* $Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* $components */
+abbr {
+  font-variant: small-caps;
+  cursor: help;
+}
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * $Ie-hack - IE 6/7 only
+ * Trigger hasLayout and contain floats.
+ */
+.lt-ie8 .cf {
+  zoom: 1;
+}
+
+/*-----------------------*	$Global
+\*-----------------------*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Fengardon, courier, serif;
+}
+
+body {
+  font-family: 16px;
+}
+
+h1,
+h2,
+h3,
+strong {
+  font-weight: normal;
+}
+
+#global {
+  height: 100%;
+}
+
+::-moz-selection {
+  background: #f3e4b2;
+}
+
+::selection {
+  background: #f3e4b2;
+}
+
+::-moz-selection {
+  background: #f3e4b2;
+}
+
+/*-----------------------*	$Header
+\*-----------------------*/
+header {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 700;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h1 a {
+  color: #e0ca7f;
+  text-transform: uppercase;
+  text-shadow: -10px -10px 10px rgba(255, 255, 255, 0.1);
+  display: block;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+header > a {
+  color: #e0ca7f;
+  text-decoration: none;
+  font-size: 1.3em;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #fff;
+  padding: .5em;
+}
+
+header a:hover,
+header a:focus,
+header a:active {
+  color: #cea146;
+  cursor: help;
+}
+
+@supports (background-clip: text) or (text-fill-color: transparent) or (-moz-text-fill-color: transparent) or (-webkit-text-fill-color: transparent) {
+  h1 {
+    background: #e0ca7f;
+    background: linear-gradient(45deg, #e0ca7f 0%, #9a7733 15%, #93702c 26%, #e7d57f 40%, #9d7b3c 60%, #9d7b3c 73%, #cea146 86%, #886718 100%);
+  }
+  h1 a:hover,
+  h1 a:focus,
+  h1 a:active {
+    background: #cea146;
+    background: linear-gradient(to bottom, #e0ca7f 0%, #9a7733 21%, #e7d57f 50%, #9d7b3c 78%, #cea146 89%, #886718 100%);
+  }
+}
+
+@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+  h1 {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h1 a:hover,
+  h1 a:focus,
+  h1 a:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@supports (-moz-background-clip: text) and (-moz-text-fill-color: transparent) {
+  h1 {
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+  h1 a:hover,
+  h1 a:focus,
+  h1 a:active {
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}
+
+@supports (background-clip: text) and (text-fill-color: transparent) {
+  h1 {
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  h1 a:hover,
+  h1 a:focus,
+  h1 a:active {
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+
+/*-----------------------*	$Content
+\*-----------------------*/
+#gallery {
+  padding: 0 10px;
+  display: table;
+  height: 100%;
+}
+
+#gallery li {
+  list-style-type: none;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+figure {
+  position: relative;
+  min-height: 640px;
+  min-width: 320px;
+}
+
+figure img {
+  z-index: 666;
+  position: relative;
+}
+
+figure:hover img,
+figure:focus img {
+  position: static;
+}
+
+figcaption {
+  display: block;
+  font-family: Courier, serif;
+  position: absolute;
+  color: #ffd700;
+  bottom: 5px;
+  right: 5px;
+  font-size: 1.2em;
+  text-align: right;
+  z-index: 0;
+}
+
+figure:hover figcaption,
+figure:focus figcaption {
+  z-index: 3666;
+}
+
+/* $no-js gallery */
+.no-js #gallery {
+  display: block;
+  margin-top: 100px;
+  height: auto;
+}
+
+.no-js #gallery li {
+  display: block;
+  clear: left;
+}
+
+.no-js #gallery img {
+  float: left;
+  margin-right: 20px;
+}
+
+.no-js #gallery figcaption {
+  position: static;
+  text-align: left;
+  color: #cea146;
+}
+
+/*-----------------------*	$About
+\*-----------------------*/
+#about {
+  position: fixed;
+  left: 0;
+  top: 200px;
+}
+
+#about.on {
+  z-index: 3666;
+}
+
+#about.on > * {
+  width: auto;
+}
+
+#about > * {
+  position: relative;
+  left: -1000px;
+  max-width: 960px;
+  height: auto;
+  width: 0;
+}
+
+#about > *.on {
+  left: 0;
+}
+
+#about h2,
+#about p {
+  color: #9d7b3c;
+  background: #fff;
+  padding-left: 20px;
+  padding-right: 5px;
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+
+#about strong {
+  border-bottom: 1px dotted #9d7b3c;
+}
+
+#about a {
+  color: #27a887;
+  text-decoration: none;
+}
+
+#about a:hover,
+#about a:focus,
+#about a:active {
+  border-bottom: 1px dotted #27a887;
+}
+
+#about hr {
+  display: block;
+  background: #fff;
+  height: 25px;
+  width: 100%;
+  max-width: 990px;
+  border: 0;
+  margin-bottom: 5px;
+}
+
+#about > * {
+  transition: left 0.8s ease;
+}
+
+/* $no-js about */
+.no-js #about {
+  clear: left;
+  position: static;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.no-js #about > *.off {
+  position: statics;
+  left: inherit;
+}
+
+/*-----------------------*	$Reponsive
+\*-----------------------*/
+/* Smartphones (portrait) ----------- */
+@media screen and (max-width: 38em) {
+  h1 {
+    font-size: 2.5em;
+    max-width: 250px;
+  }
+  header > a {
+    display: none;
+  }
+  #about {
+    font-size: 0.7em;
+    top: 105px;
+  }
+  #about h2,
+  #about p {
+    margin-bottom: 3px;
+  }
+  #about hr {
+    display: none;
+  }
+  #gallery {
+    padding: 0;
+  }
+  #gallery li {
+    padding: 0;
+    margin: 20px 0;
+    display: block;
+  }
+  #gallery li img {
+    width: 100%;
+  }
+  figcaption {
+    position: static;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
