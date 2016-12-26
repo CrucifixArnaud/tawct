@@ -28,7 +28,7 @@ window.onload = function() {
 let horizontalScroll = false;
 
 function checkScroll() {
-  const globalWidth = globalTag.offsetWidth;
+  let globalWidth = globalTag.offsetWidth;
 
   if (globalWidth > 608) {
     horizontalScroll = true;
@@ -46,25 +46,31 @@ window.onresize = function() {
 // Keyboard nav
 // ---------------------
 window.onkeydown = function(e) {
-  var _key = e.keyCode,
-    _currentScrollPos;
+
+  let key = e.keyCode,
+    currentScrollPos,
+    galleryWidth = gallery.offsetWidth;
+
   if(horizontalScroll === true) {
-    _currentScrollPos = window.pageXOffset;
-    if(_key === 37 || _key === 38) {
-      window.scrollTo(_currentScrollPos - (2 * 250), 0);
+    currentScrollPos = window.pageXOffset;
+    if(key === 37 || key === 38 || key === 38) {
       e.preventDefault();
-    } else if(_key === 39 || _key === 40) {
-      window.scrollTo(_currentScrollPos + (2 * 250), 0);
+      window.scrollTo(currentScrollPos - (500), 0);
+    } else if(key === 39 || key === 40 || key === 40) {
       e.preventDefault();
-    }
-  } else {
-    _currentScrollPos = window.pageYOffset;
-    if (_key === 37 || _key === 38) {
-      window.scrollTo(0, _currentScrollPos - (1 * 520));
+      window.scrollTo(currentScrollPos + (500), 0);
+    } else if(key === 33) {
       e.preventDefault();
-    } else if (_key === 39 || _key === 40) {
-      window.scrollTo(0, _currentScrollPos + (1 * 520));
+      window.scrollTo(currentScrollPos - (5000), 0);
+    } else if(key === 34) {
       e.preventDefault();
+      window.scrollTo(currentScrollPos + (5000), 0);
+    } else if(key === 35) {
+      e.preventDefault();
+      window.scrollTo(galleryWidth, 0);
+    } else if (key === 36) {
+      e.preventDefault();
+      window.scrollTo(0, 0);
     }
   }
 };
