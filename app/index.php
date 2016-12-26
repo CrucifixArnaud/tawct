@@ -77,7 +77,6 @@
     </div>
   </div>
   <?php if($env == 'dev'){ ?>
-    <script src="/statics/js/lib/browsersdetect.min.js"></script>
     <script src="/statics/js/lib/lazyload.min.js"></script>
     <script src="/statics/js/animate-sequence.js"></script>
     <script src="/statics/js/tawct.js"></script>
