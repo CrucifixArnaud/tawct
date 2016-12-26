@@ -18,7 +18,7 @@ window.onload = function() {
   // Check scroll
   checkScroll();
   // remove class
-  globalTag.classList.remove('no-js');
+  document.body.className = document.body.className.replace('no-js','');
   gallery.classList.remove('cf');
 };
 

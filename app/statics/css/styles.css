@@ -316,9 +316,10 @@ figure:focus figcaption {
   padding-bottom: 20px;
 }
 
-.no-js #about > *.off {
+.no-js #about > * {
   position: statics;
   left: inherit;
+  width: 100%;
 }
 
 /*-----------------------*	$Reponsive
