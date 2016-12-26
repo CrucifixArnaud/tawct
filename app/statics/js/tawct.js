@@ -25,10 +25,10 @@ window.onload = function() {
 // Checkscroll
 // Toggle customscrolling according to the windows size
 //-------------------------
-let horizontalScroll = false;
+var horizontalScroll = false;
 
 function checkScroll() {
-  let globalWidth = globalTag.offsetWidth;
+  var globalWidth = globalTag.offsetWidth;
 
   if (globalWidth > 608) {
     horizontalScroll = true;
@@ -47,7 +47,7 @@ window.onresize = function() {
 // ---------------------
 window.onkeydown = function(e) {
 
-  let key = e.keyCode,
+  var key = e.keyCode,
     currentScrollPos,
     galleryWidth = gallery.offsetWidth;
 
@@ -81,7 +81,7 @@ function doScroll (e) {
   // If custom scroll, scroll horizontal
   if (horizontalScroll === true) {
     e = window.event || e;
-    let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
 
     window.scrollBy(-delta * 100, 0);
     e.preventDefault();
@@ -98,44 +98,51 @@ if (window.addEventListener) {
 
 // About
 //-------------------------
-const itemsList = document.getElementById('about');
-const btnAbouts = document.querySelectorAll('.link-about');
-let itemsListState = false;
-let animationState = false;
-let uglyTimerHack;
+const itemsList = window.cleanWhitespace(document.getElementById('about'));
+var btnAbouts = document.querySelectorAll('.link-about');
+btnAbouts = Array.prototype.slice.call(btnAbouts, 0); // Convert btnAbouts to an real array (instead of nodeList for backward compatibility)
+var itemsListState = false;
+var animationState = false;
+
+itemsList.lastChild.addEventListener('transitionend', function() {
+  if (itemsListState === false) {
+    animationState = false;
+    itemsListState = true;
+  }
+});
+
+itemsList.firstChild.addEventListener('transitionend', function() {
+  if (itemsListState === true) {
+    itemsList.classList.toggle('on');
+    animationState = false;
+    itemsListState = false;
+  }
+});
+
 
 function btnAboutHandler () {
-  return function (e) {
+  return function(e) {
     e.preventDefault();
+
     // Prevent click during animation
     if(animationState === false) {
       animationState = true;
-      if(itemsListState === false){
+      if(itemsListState === false) {
         itemsList.classList.toggle('on');
         animateSequence(itemsList, {
           direction: 'forward',
-          duration: 50,
-          callback: function() {
-            animationState = false; // toggle animationstate
-            itemsListState = true;
-          }
+          duration: 50
         });
       } else {
         animateSequence(itemsList, {
           direction: 'backward',
-          duration: 50,
-          callback: function(){
-            uglyTimerHack = setTimeout(function(){
-              clearTimeout(uglyTimerHack);
-              itemsList.classList.toggle('on');
-              itemsListState = false;
-              animationState = false; // toggle animationstate
-            }, 400);
-          }
+          duration: 50
         });
       }
     }
   };
 }
 
-btnAbouts.forEach(btnAbout => btnAbout.addEventListener('click', btnAboutHandler()));
+btnAbouts.forEach(function(btnAbout) {
+  btnAbout.addEventListener('click', btnAboutHandler());
+});

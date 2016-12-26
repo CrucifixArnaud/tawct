@@ -79,6 +79,7 @@
   <?php if($env == 'dev'){ ?>
     <script src="/statics/js/lib/lazyload.min.js"></script>
     <script src="/statics/js/animate-sequence.js"></script>
+    <script src="/statics/js/utils.js"></script>
     <script src="/statics/js/tawct.js"></script>
   <?php }else{ ?>
     <script src="/statics/js/scripts.js"></script>
