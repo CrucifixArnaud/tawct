@@ -33,7 +33,7 @@ function checkScroll() {
   if (globalWidth > 608) {
     horizontalScroll = true;
   } else {
-    horizontalScroll = true;
+    horizontalScroll = false;
   }
 }
 
@@ -73,7 +73,7 @@ window.onkeydown = function(e) {
 // ---------------------
 function doScroll (e) {
   // If custom scroll, scroll horizontal
-  if (horizontalScroll) {
+  if (horizontalScroll === true) {
     e = window.event || e;
     let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
 
