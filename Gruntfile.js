@@ -101,7 +101,7 @@ module.exports = function (grunt) {
                 separator: ';',
             },
             dist: {
-                src: ['<%= config.dist %>/statics/js/{,*/}*.js'],
+                src: ['<%= config.dist %>/statics/js/utils.js', '<%= config.dist %>/statics/js/{,*/}*.js'],
                 dest: '<%= config.dist %>/statics/js/scripts.js',
             },
         },
