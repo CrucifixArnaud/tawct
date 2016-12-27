@@ -11,17 +11,17 @@
 <head>
   <meta charset="utf-8">
 
-  <!-- Prefetch DNS for external assets. -->
-  <link rel="dns-prefetch" href="/ajax.googleapis.com/">
-
   <title>The Amazing Wc Tour</title>
   <meta name="author" content="humans.txt">
   <meta name="description" content="WC that I have visited in my life. Simple photography, no pictures improvement, just raw shoots of toilets, takes in every day's life condition">
   <meta name="apple-mobile-web-app-title" content="The Amazing Wc Tour">
+
   <meta name="viewport" content="width=device-width">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="/statics/css/styles.css">
 
-
+  <!-- Favicon & others -->
   <link rel="apple-touch-icon" sizes="180x180" href="/statics/img/favicons/apple-touch-icon.png">
   <link rel="icon" href="/statics/img/favicons/favicon-32x32.png?v=2" sizes="32x32">
   <link rel="icon" href="/statics/img/favicons/favicon-16x16.png?v=2" sizes="16x16">
@@ -94,8 +94,8 @@
   </div>
   <?php if($env == 'dev'){ ?>
     <script src="/statics/js/lib/lazyload.min.js"></script>
-    <script src="/statics/js/animate-sequence.js"></script>
     <script src="/statics/js/utils.js"></script>
+    <script src="/statics/js/animate-sequence.js"></script>
     <script src="/statics/js/tawct.js"></script>
   <?php }else{ ?>
     <script src="/statics/js/scripts.js"></script>
