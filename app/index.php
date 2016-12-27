@@ -1,10 +1,8 @@
 <?php
   // Config
   $config = parse_ini_file ('config.ini');
-  $app = $config['app'];
   $dir = $config['data'];
   $env = $config['environment'];
-  $favicon = $config['favicon'];
   $picturesCount = 0;
 ?>
 <!doctype html>
@@ -52,6 +50,7 @@
       clearstatcache();
       $files = array();
       $i = 0;
+
       while($file = readdir($d)){
         $i ++;
         $files[$i] = $file;
