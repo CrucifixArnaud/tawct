@@ -13,21 +13,14 @@ hello[at]crucifixarnaud.com
 	Homemade :
 		* HTML5
 		* Javascript
-		* Css (compiled with Less)
+		* Css (compiled with Sass)
 
-	External lib : 
-		* jquery :	http://jquery.com/
-		* jquery.lazyload : http://www.appelsiini.net/projects/lazyload
-		* jquery.mousewhell :	https://code.google.com/p/razor/downloads/detail?name=jquery.mousewheel.min.js
-
-	Tools :
-		* Sublime text 3 : http://www.sublimetext.com/3
-		* Less.app : http://incident57.com/less/
-		* Git : http://git-scm.com/
+	External lib :
+		* lazyload : https://github.com/verlok/lazyload
 
 	Fonts :
 		This website use FengardoNeue typeface, created by Akalollip (http://www.akalollip.com/) and distributed by Velvetyne (http://www.velvetyne.fr/) type foundry under SIL OFL licence (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL) or creative commons licences.
-		
+
 		Captions use Courier typeface, created by Howard "Bud" Kettler for ibm. (http://www.graphos.org/courier.html)
 
 #	© Copyright
