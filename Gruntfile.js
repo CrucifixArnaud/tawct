@@ -229,7 +229,7 @@ module.exports = function (grunt) {
         'eslint',
         'clean:dist',
         'copyto:dist',
-        'imagemin',
+        // 'imagemin',
         'concat:dist',
         'clean:concat',
         'clean:sketch',
