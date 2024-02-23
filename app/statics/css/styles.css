@@ -193,12 +193,15 @@ figcaption {
   display: block;
   font-family: Courier, serif;
   position: absolute;
-  color: var(--color-yellow-gold);
-  bottom: 5px;
-  right: 5px;
+  color: var(--color-caption);
+  bottom: 10px;
+  right: 0;
   font-size: 1.2rem;
   text-align: right;
   z-index: 0;
+  padding: .4rem .4rem .1rem;
+  line-height: 1;
+  background: var(--color-background);
 }
 
 figure:hover figcaption,
