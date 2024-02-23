@@ -33,14 +33,6 @@ abbr {
   clear: both;
 }
 
-/**
- * $Ie-hack - IE 6/7 only
- * Trigger hasLayout and contain floats.
- */
-.lt-ie8 .cf {
-  zoom: 1;
-}
-
 /* Global */
 html,
 body {
