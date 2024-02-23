@@ -1,4 +1,7 @@
 /* tawct.be */
+
+@import "_variables.css";
+
 @font-face {
   font-family: 'Fengardon';
   src: url("../fonts/fengardoneue_regular-webfont.eot");
@@ -62,15 +65,15 @@ strong {
 }
 
 ::-moz-selection {
-  background: #f3e4b2;
+  background: var(--color-selection);
 }
 
 ::selection {
-  background: #f3e4b2;
+  background: var(--color-selection);
 }
 
 ::-moz-selection {
-  background: #f3e4b2;
+  background: var(--color-selection);
 }
 
 /* $Header */
@@ -86,7 +89,7 @@ h1 {
 }
 
 h1 a {
-  color: #e0ca7f;
+  color: var(--color-title);
   text-transform: uppercase;
   text-shadow: -10px -10px 10px rgba(255, 255, 255, 0.1);
   display: block;
@@ -95,32 +98,32 @@ h1 a {
 }
 
 header > a {
-  color: #e0ca7f;
+  color: var(--color-header-text);
   text-decoration: none;
   font-size: 1.3em;
   position: fixed;
   right: 0;
   top: 0;
-  background: #fff;
+  background: var(--color-background);
   padding: .5em;
 }
 
 header a:hover,
 header a:focus,
 header a:active {
-  color: #cea146;
+  color: var(--color-title-hover);
   cursor: help;
 }
 
 @supports (background-clip: text) or (text-fill-color: transparent) or (-moz-text-fill-color: transparent) or (-webkit-text-fill-color: transparent) {
   h1 {
-    background: #e0ca7f;
+    background: var(--color-title);
     background: linear-gradient(45deg, #e0ca7f 0%, #9a7733 15%, #93702c 26%, #e7d57f 40%, #9d7b3c 60%, #9d7b3c 73%, #cea146 86%, #886718 100%);
   }
   h1 a:hover,
   h1 a:focus,
   h1 a:active {
-    background: #cea146;
+    background: var(--color-title-hover);
     background: linear-gradient(to bottom, #e0ca7f 0%, #9a7733 21%, #e7d57f 50%, #9d7b3c 78%, #cea146 89%, #886718 100%);
   }
 }
@@ -198,7 +201,7 @@ figcaption {
   display: block;
   font-family: Courier, serif;
   position: absolute;
-  color: #ffd700;
+  color: var(--color-yellow-gold);
   bottom: 5px;
   right: 5px;
   font-size: 1.2em;
@@ -231,7 +234,7 @@ figure:focus figcaption {
 .no-js #gallery figcaption {
   position: static;
   text-align: left;
-  color: #cea146;
+  color: var(--color-caption-no-jss);
 }
 
 /* About */
@@ -263,8 +266,8 @@ figure:focus figcaption {
 
 #about h2,
 #about p {
-  color: #9d7b3c;
-  background: #fff;
+  color: var(--color-about-text);
+  background: var(--color-background);
   padding-left: 20px;
   padding-right: 5px;
   margin-bottom: 5px;
@@ -272,23 +275,23 @@ figure:focus figcaption {
 }
 
 #about strong {
-  border-bottom: 1px dotted #9d7b3c;
+  border-bottom: 1px dotted var(--color-about-text);
 }
 
 #about a {
-  color: #27a887;
+  color: var(--color-link);
   text-decoration: none;
 }
 
 #about a:hover,
 #about a:focus,
 #about a:active {
-  border-bottom: 1px dotted #27a887;
+  border-bottom: 1px dotted var(--color-link);
 }
 
 #about hr {
   display: block;
-  background: #fff;
+  background: var(--color-background);
   height: 25px;
   width: 100%;
   max-width: 990px;

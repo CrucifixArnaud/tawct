@@ -1,0 +1,21 @@
+:root {
+    --color-yellow-chenin: #e0ca7f;
+    --color-yellow-sidecar: #f3e4b2;
+    --color-yellow-roti: #cea146;
+    --color-yellow-gold: #ffd700;
+    --color-sycamore: #9d7b3c;
+    --color-white: #fff;
+
+    --color-green-jungle: #27a887;
+
+    --color-title: var(--color-yellow-chenin);
+    --color-header-text: var(--color-yellow-chenin);
+    --color-title-hover: var(--color-yellow-roti);
+    --color-caption: var(--color-yellow-gold);
+    --color-caption-no-js: var(--color-yellow-roti);
+    --color-about-text: var(--color-sycamore);
+    --color-link: var(--color-green-jungle);
+    --color-background: var(--color-white);
+
+    --color-selection: var(--color-yellow-sidecar);
+}
