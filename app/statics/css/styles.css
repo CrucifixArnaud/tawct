@@ -52,10 +52,6 @@ strong {
   font-weight: normal;
 }
 
-#global {
-  height: 100%;
-}
-
 ::-moz-selection {
   background: var(--color-selection);
 }
@@ -161,15 +157,12 @@ header a:active {
 
 /* Content */
 #gallery {
-  padding: 0 10px;
-  display: table;
-  height: 100%;
+  display: flex;
+  padding: 100px 10px 0;
 }
 
 #gallery li {
   list-style-type: none;
-  display: table-cell;
-  vertical-align: middle;
   padding: 10px;
 }
 
@@ -334,6 +327,7 @@ figure:focus figcaption {
     display: none;
   }
   #gallery {
+    display: block;
     padding: 0;
   }
   #gallery li {
