@@ -1,8 +1,4 @@
-/*-----------------------*	The Amazing Wc Tour
-\*-----------------------*/
-/***********************  $shared
-\***********************/
-/* @fontface */
+/* tawct.be */
 @font-face {
   font-family: 'Fengardon';
   src: url("../fonts/fengardoneue_regular-webfont.eot");
@@ -11,13 +7,13 @@
   font-style: normal;
 }
 
-/* $Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* $components */
+/* components */
 abbr {
   font-variant: small-caps;
   cursor: help;
@@ -42,8 +38,7 @@ abbr {
   zoom: 1;
 }
 
-/*-----------------------*	$Global
-\*-----------------------*/
+/* Global */
 html,
 body {
   height: 100%;
@@ -78,8 +73,7 @@ strong {
   background: #f3e4b2;
 }
 
-/*-----------------------*	$Header
-\*-----------------------*/
+/* $Header */
 header {
   position: fixed;
   top: 15px;
@@ -170,8 +164,7 @@ header a:active {
   }
 }
 
-/*-----------------------*	$Content
-\*-----------------------*/
+/* Content */
 #gallery {
   padding: 0 10px;
   display: table;
@@ -218,7 +211,7 @@ figure:focus figcaption {
   z-index: 3666;
 }
 
-/* $no-js gallery */
+/* no-js gallery */
 .no-js #gallery {
   display: block;
   margin-top: 100px;
@@ -241,8 +234,7 @@ figure:focus figcaption {
   color: #cea146;
 }
 
-/*-----------------------*	$About
-\*-----------------------*/
+/* About */
 #about {
   position: fixed;
   left: 0;
@@ -308,7 +300,7 @@ figure:focus figcaption {
   transition: left 0.8s ease;
 }
 
-/* $no-js about */
+/* no-js about */
 .no-js #about {
   clear: left;
   position: static;
@@ -322,9 +314,8 @@ figure:focus figcaption {
   width: 100%;
 }
 
-/*-----------------------*	$Reponsive
-\*-----------------------*/
-/* Smartphones (portrait) ----------- */
+/* Reponsive */
+/* Smartphones (portrait) */
 @media screen and (max-width: 38em) {
   h1 {
     font-size: 2.5em;
@@ -359,5 +350,3 @@ figure:focus figcaption {
     position: static;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
