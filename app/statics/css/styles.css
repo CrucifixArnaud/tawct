@@ -226,7 +226,7 @@ figure:focus figcaption {
 .no-js #gallery figcaption {
   position: static;
   text-align: left;
-  color: var(--color-caption-no-jss);
+  color: var(--color-caption-no-js);
 }
 
 /* About */
