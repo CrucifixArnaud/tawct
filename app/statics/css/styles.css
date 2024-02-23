@@ -313,8 +313,12 @@ figure:focus figcaption {
     max-width: 250px;
   }
   header > a {
-    display: none;
+    display: block;
+    position: fixed;
+    top: initial;
+    bottom: .5rem;
   }
+
   #about {
     font-size: 0.7rem;
     top: 105px;
