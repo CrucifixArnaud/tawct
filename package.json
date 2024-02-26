@@ -1,9 +1,9 @@
 {
-  "name": "crucifixarnaud.com",
+  "name": "tawct.be",
   "version": "0.1.0",
-  "description": "Crucifix Arnaud Websites",
+  "description": "The Amazing WC Tour",
   "main": "/app/index.php",
-  "readme": "readme.txt",
+  "readme": "readme.md",
   "author": "hello@crucifixarnaud.com",
   "license": "WTFPL",
   "devDependencies": {
