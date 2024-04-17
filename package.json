@@ -7,5 +7,9 @@
   "author": "hello@crucifixarnaud.com",
   "license": "WTFPL",
   "devDependencies": {
+    "rollup": "^4.14.3"
+  },
+  "scripts": {
+    "build": "rollup app/statics/js/tawct.js --file ./app/statics/js/scripts.js --format iife"
   }
 }
