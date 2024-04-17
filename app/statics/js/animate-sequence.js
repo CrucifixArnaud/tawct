@@ -64,4 +64,6 @@ const animateSequence = function(target, parameters) {
 
 };
 
+export default animateSequence;
+
 window.animateSequence = animateSequence;

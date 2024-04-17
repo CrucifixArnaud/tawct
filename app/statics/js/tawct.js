@@ -1,3 +1,6 @@
+import animateSequence from "./animate-sequence";
+import { cleanWhitespace } from "./utils";
+
 /*--------------------------
  *
  *  tawct.js
@@ -98,7 +101,7 @@ if (window.addEventListener) {
 
 // About
 //-------------------------
-const itemsList = window.cleanWhitespace(document.getElementById('about'));
+const itemsList = cleanWhitespace(document.getElementById('about'));
 var btnAbouts = document.querySelectorAll('.link-about');
 btnAbouts = Array.prototype.slice.call(btnAbouts, 0); // Convert btnAbouts to an real array (instead of nodeList for backward compatibility)
 var itemsListState = false;

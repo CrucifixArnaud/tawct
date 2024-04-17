@@ -13,4 +13,6 @@ const cleanWhitespace = function(node) {
   return node;
 };
 
+export { cleanWhitespace };
+
 window.cleanWhitespace = cleanWhitespace;
