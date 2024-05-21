@@ -6,3 +6,5 @@ node_modules/
 app/config.ini
 dist/config.ini
 .idea
+app/statics/js/scripts.js
+.parcel-cache
