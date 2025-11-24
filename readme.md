@@ -10,13 +10,13 @@ WC that I have visited in my life. Simple photography, no pictures improvement, 
 
     npm install
 
-2. Launch grunt watcher
+2. Build
 
-    grunt watch
+    npm run build
 
 ## To Test
 
-1. Configure your vhost (tawct.dev)
+1. Configure your vhost (e.g. tawct.dev)
 2. Copy correct config.dev.ini file in the app folder
 3. Rename the config.dev.ini into config.ini
 
