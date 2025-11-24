@@ -2,7 +2,6 @@
   // Config
   $config = parse_ini_file ('config.ini');
   $dir = $config['data'];
-  $env = $config['environment'];
   $picturesCount = 0;
 ?>
 <!doctype html>
