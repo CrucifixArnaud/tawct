@@ -1,3 +1,4 @@
+import LazyLoad from "./lib/lazyload.min.js";
 import animateSequence from "./animate-sequence";
 import { cleanWhitespace } from "./utils";
 

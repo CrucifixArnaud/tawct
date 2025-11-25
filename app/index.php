@@ -89,7 +89,6 @@
       <p>Captions use <strong>Courier</strong> typeface, created by <a href="http://www.graphos.org/courier.html" title="To the graphos.org page about Courier">Howard "Bud" Kettler</a> for <abbr title="International Business Machines">ibm</abbr>.</p>
     </div>
   </div>
-  <script src="/statics/js/lib/lazyload.min.js"></script>
   <script src="/statics/js/scripts.js"></script>
 </body>
 </html>
