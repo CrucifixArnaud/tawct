@@ -1,7 +1,6 @@
 <?php
   // Config
-  $config = parse_ini_file ('config.ini');
-  $dir = $config['data'];
+  $dir = 'data/img/';
   $picturesCount = 0;
 ?>
 <!doctype html>
