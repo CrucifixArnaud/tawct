@@ -8,3 +8,5 @@ dist/config.ini
 .idea
 app/statics/js/scripts.js
 .parcel-cache
+dist
+.env
